@@ -23,7 +23,8 @@
           </div>
         </div>
         <div class="popup-in js-popup-in">
-          <h3 class="popup-title">Пополнение счета</h3>
+          <h3 class="popup-title js-pay-title">Пополнение счета</h3>
+          <h3 style="display: none;" class="popup-title js-sms-title">Оплата через sms</h3>
           <div class="popup-payment">
             <div class="popup-note">Выберите тип платежа</div>
             <ul class="popup-payment-type js-payment-type">
@@ -56,9 +57,15 @@
             <div class="popup-commission js-popup-commission-pay">С карты спишется также комиссия 0,5%</div>
             <div class="popup-commission js-popup-commission-sms">Со счета спишется также комиссия оператора  в размере 6 грн.</div>
           </div>
-          <div class="popup-pay"><a href="#" class="popup-pay-btn js-pay">Оплатить</a>
+          <div class="popup-payment-sms">
+            <div class="popup-payment-sms-note">Отправьте sms c текстом:</div>
+            <div class="popup-payment-sms-field">KL 291145</div><span class="popup-payment-sms-note">На номер:</span><span class="popup-payment-sms-num">6907</span>
+            <div class="popup-payment-sms-info">Стоимость SMS сообщения на номер 6907 составляет 8 грн с НДС, без ПФ (дополнительно удерживается сбор в Пенсионный фонд в размере 7,5% от стоимости услуги без учета НДС). Услуга только для совершеннолетних абонентов всех национальных GSM операторов. Технический партнер ООО «ВЕС Медиа»; 02091, г. Киев, Харьковское шоссе, 144В; +380445380308, Пн-Пт 10:00 до 19:00</div>
+          </div>
+          <div class="popup-pay js-popup-pay"><a href="#" class="popup-pay-btn js-pay">Оплатить</a>
             <div class="popup-pay-descr">После нажатия кнопки «Оплатить» вы будете перенаправлены на сайт money.ua</div>
           </div>
+          <div class="popup-pay js-popup-pay-sms"><a href="#" class="popup-pay-btn js-sms-step2">Оплатить</a><a href="#" class="popup-back js-popup-back-step">Вернуться к выбору вариантов оплаты</a></div>
         </div>
       </div>
     </div>

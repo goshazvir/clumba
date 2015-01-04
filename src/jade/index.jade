@@ -16,7 +16,8 @@ html
             .popup-succes-state Ваш счет успешно пополнен
             .popup-succes-note Объявление теперь горячее
         .popup-in.js-popup-in
-          h3.popup-title Пополнение счета
+          h3.popup-title.js-pay-title Пополнение счета
+          h3.popup-title.js-sms-title(style="display: none;") Оплата через sms
           .popup-payment
             .popup-note Выберите тип платежа
             ul.popup-payment-type.js-payment-type
@@ -47,7 +48,16 @@ html
                     li(data-id='3') 22.50 гривен
             .popup-commission.js-popup-commission-pay С карты спишется также комиссия 0,5%
             .popup-commission.js-popup-commission-sms Со счета спишется также комиссия оператора  в размере 6 грн.
-          .popup-pay
+          .popup-payment-sms
+            .popup-payment-sms-note Отправьте sms c текстом:
+            .popup-payment-sms-field KL 291145
+            span.popup-payment-sms-note На номер:
+            span.popup-payment-sms-num 6907
+            .popup-payment-sms-info Стоимость SMS сообщения на номер 6907 составляет 8 грн с НДС, без ПФ (дополнительно удерживается сбор в Пенсионный фонд в размере 7,5% от стоимости услуги без учета НДС). Услуга только для совершеннолетних абонентов всех национальных GSM операторов. Технический партнер ООО «ВЕС Медиа»; 02091, г. Киев, Харьковское шоссе, 144В; +380445380308, Пн-Пт 10:00 до 19:00
+          .popup-pay.js-popup-pay
             a.popup-pay-btn.js-pay(href="#") Оплатить
             .popup-pay-descr После нажатия кнопки «Оплатить» вы будете перенаправлены на сайт money.ua
+          .popup-pay.js-popup-pay-sms
+            a.popup-pay-btn.js-sms-step2(href="#") Оплатить
+            a.popup-back.js-popup-back-step(href="#") Вернуться к выбору вариантов оплаты
     script(data-headjs-load='js/init.js', src='js/lib/head.js') 

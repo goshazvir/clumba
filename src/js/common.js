@@ -12,20 +12,59 @@ head.ready(function() {
       $('.js-popup-commission-sms').show();
       $('.js-popup-commission-pay').hide();
       $('.popup-pay-descr').hide();
+      $('.js-pay').addClass('is-sms');
+      $('.js-sms-title').show();
+      $('.js-pay-title').hide();
+      $('.js-popup-pay-sms').show();
+      $('.js-popup-pay').hide();
     } else {
         $('.popup-summ').show();
         $('.popup-sms-sum').hide();
         $('.js-popup-commission-pay').show();
         $('.js-popup-commission-sms').hide();
         $('.popup-pay-descr').show();
+        $('.js-pay').removeClass('is-sms');
+        $('.js-sms-title').hide();
+        $('.js-pay-title').show();
+        $('.js-popup-pay-sms').hide();
+        $('.js-popup-pay').show();
       }
   });
 
   $('.js-pay').on('click', function() {
-    $('.js-popup-in').hide();
-    $('.js-popup-succes').fadeIn();
+    if ($(this).hasClass('is-sms')) {
+      $('.js-sms-title').show();
+      $('.popup-payment-sms').show();
+    } else {
+      $('.js-popup-in').hide();
+      $('.js-popup-succes').fadeIn();
+      $('.popup-payment-sms').hide();
+    }
   });
 
+  $('.js-sms-step2').on('click', function() {
+    $('.popup-payment').hide();
+    $('.popup-payment-sms').show();
+    $('.js-popup-back-step').show();
+
+    if ($(this).hasClass('is-sms-step2')) {
+      $('.js-popup-in').hide();
+      $('.js-popup-succes').fadeIn();
+    } else {
+      $(this).addClass('is-sms-step2');
+      $(this).text('Готово');
+    }
+  });
+
+  $('.js-popup-back-step').on('click', function() {
+    $('.popup-payment').show();
+    $('.popup-payment-sms').hide();
+    $('.js-popup-back-step').hide();
+    $('.js-sms-step2').removeClass('is-sms-step2');
+    $('.js-sms-step2').text('Оплатить');
+  });
+
+  // popup close
   $('.js-popup-close').on('click', function() {
     $('.popup').fadeOut();
     $('.overlay').fadeOut();

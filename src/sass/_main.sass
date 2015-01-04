@@ -169,6 +169,15 @@ body
       font-weight: bold 
     .popup-succes-note
       font-size: 14px
+  .popup-back
+    display: none
+    margin-left: 15px
+    border-bottom: 1px dotted #666
+    font-size: 13px
+    color: #666
+    text-decoration: none
+    &:hover
+      border-color: transparent 
   .input
     width: 98px
     padding: 8px 10px
@@ -176,11 +185,39 @@ body
     line-height: 21px
     outline: none
     box-sizing: border-box 
+  .popup-payment-sms
+    .popup-payment-sms-note
+      margin-bottom: 5px
+      font-size: 16px
+      font-weight: bold
+    .popup-payment-sms-field
+      margin-bottom: 17px
+      padding: 12px 0
+      background: #FFF7E9
+      border: 1px dashed #d4c4a4
+      text-align: center
+      font-size: 28px 
+      font-weight: bold
+      text-transform: uppercase
+    .popup-payment-sms-num
+      margin-left: 10px
+      font-size: 28px
+      font-weight: bold
+    .popup-payment-sms-info
+      margin: 16px 0 
+      padding-top: 13px
+      border-top: 1px solid #dddddd
+      font-size: 10px
+      color: rgba(#000, .5) 
 
 .popup-sms-sum
   display: none
   margin-bottom: 8px
+.popup-payment-sms
+  display: none
 .js-popup-commission-sms
+  display: none
+.js-popup-pay-sms
   display: none
 
 //  ICO

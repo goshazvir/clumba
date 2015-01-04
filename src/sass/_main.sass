@@ -1,0 +1,302 @@
+// VAR, EXTENDS
+// ===============================================
+
+%btn
+  display: inline-block
+  border-radius: 4px
+  padding: 18px 20px
+  font-size: 16px
+  line-height: 18px
+  color: #FFF 
+  text-decoration: none
+  transition: 0.2s linear
+%btn-succes
+  background-color: #62c007
+  &:hover
+    background-color: #7fce32
+  &:active
+    background-color: #62c007
+    box-shadow: inset 1px 2px 3px #50940e
+
+//  GENERAL
+// ===============================================
+/* 
+ * GENERAL 
+ */
+body, html
+  height: 100%
+body
+  min-width: 800px
+  font-size: 14px
+  font-family: Arial, sans-serif 
+  line-height: 1.2 
+  -webkit-font-smoothing: antialiased  
+  -moz-osx-font-smoothing: antialiased
+  &.is-popup
+    overflow: hidden
+
+.out
+  position: relative
+  height: 100%
+  min-height: 500px
+
++r(800px)
+  body
+    &.is-popup
+      overflow: visible
+//  POPUP
+// ===============================================
+/* 
+ * POPUP 
+ */ 
+.overlay
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background: rgba(#000, .6)
+
+.popup
+  width: 570px
+  padding: 20px 20px 0
+  background: #FFF
+  border-radius: 6px
+  box-shadow: 0 5px 24px rgba(10,40,71,.8)
+  position: absolute
+  top: 100px
+  left: 50%
+  margin-left: -305px
+  z-index: 666
+  overflow: hidden
+  // .popup-in
+  //   height: 349px
+  .popup-close
+    +s($s-close)
+    position: absolute
+    top: 10px
+    right: 10px
+    cursor: pointer
+    +retina
+      +s($s-close-x2)
+    &:hover
+      +s($s-close-hover)
+      +retina
+        +s($s-close-hover-x2)
+  .popup-title
+    margin-bottom: 15px
+    +roboto-light
+    font-size: 30px
+  .popup-payment
+    .popup-payment-type
+      margin-bottom: 15px
+      +clr
+    .popup-payment-item
+      float: left
+      width: 133px
+      height: 73px
+      line-height: 73px
+      text-align: center
+      margin-left: 10px
+      border: 1px solid #d3d3d3
+      border-radius: 5px
+      background-color: #fff
+      box-shadow: 0 3px 3px rgba(0,0,0,.21), inset 0 2px 0 rgba(255,255,255,.5)
+      background-image: linear-gradient(bottom, #e8e8e8 0%, #f8f8f8 100%)
+      cursor: pointer
+      &:first-child
+        margin-left: 0
+      &:hover
+        box-shadow: 0 3px 4px rgba(0,0,0,.24), inset 0 2px 0 rgba(255,255,255,.5)
+        background-image: linear-gradient(bottom, #f8f8f8 0%, #efefef 100%)
+      &.is-active
+        background-color: #ededed
+        box-shadow: inset 0 1px 6px rgba(0,0,0,.25)
+        background-image: linear-gradient(bottom, #fff 0%, #f2f2f2 100%)
+  .popup-note
+    margin-bottom: 7px
+    font-size: 13px
+    font-weight: bold
+  .popup-summ
+    margin-bottom: 8px
+    .popup-label
+      display: inline-block
+      vertical-align: middle
+    .popup-summ-note
+      margin-left: 5px
+      font-size: 13px
+  .popup-commission
+    margin-bottom: 15px
+    font-size: 13px
+  .popup-pay
+    background: #edf6fb
+    margin: 0 -20px 0
+    padding: 20px 0 20px 20px
+    .popup-pay-btn
+      @extend %btn
+      @extend %btn-succes
+      width: 280px
+      margin-right: 5px
+      box-sizing: border-box 
+      font-weight: bold
+      vertical-align: middle
+      text-align: center
+    .popup-pay-descr 
+      width: 270px
+      display: inline-block
+      vertical-align: middle
+      font-size: 13px
+      color: rgba(#000, .6)
+  .popup-succes
+    height: 329px
+    padding-bottom: 20px
+    line-height: 329px
+    text-align: center
+    .popup-succes-in
+      line-height: 1.2
+      display: inline-block
+      vertical-align: middle
+    .popup-succes-ico
+      +s($s-succes)
+      display: block
+      margin: 0 auto 20px
+    .popup-succes-state
+      margin-bottom: 15px
+      font-size: 16px
+      color: #000
+      font-weight: bold 
+    .popup-succes-note
+      font-size: 14px
+  .input
+    width: 98px
+    padding: 8px 10px
+    font-size: 18px
+    line-height: 21px
+    outline: none
+    box-sizing: border-box 
+
+.popup-sms-sum
+  display: none
+  margin-bottom: 8px
+.js-popup-commission-sms
+  display: none
+
+//  ICO
+// ===============================================
+/* 
+ * ICO
+ */
+.ico-privat
+  display: inline-block
+  vertical-align: middle
+  width: 106px
+  height: 22px
+  background: url('../img/svg/privat24.svg') 
+.ico-visa
+  display: inline-block
+  vertical-align: middle
+  width: 114px
+  height: 31px
+  background: url('../img/svg/visa_mc.svg') 
+.ico-yandex
+  display: inline-block
+  vertical-align: middle
+  width: 99px
+  height: 42px
+  background: url('../img/svg/yandex.svg') 
+.ico-sms
+  display: inline-block
+  vertical-align: middle
+  width: 75px
+  height: 50px
+  background: url('../img/svg/sms.svg') 
+
+//  FORM
+// ===============================================
+/* 
+ * FORM
+ */
+.input
+  border: 1px solid #cbcbcb
+  border-radius: 4px
+  background-color: #fff
+  box-shadow: inset 0 1px 5px rgba(0,0,0,.13)
+  &:focus
+    border: 1px solid #6bcff5
+    box-shadow: 0 0 5px rgba(99,174,235,.5), inset 0 1px 5px rgba(0,0,0,.13)
+
+.select
+  position: relative
+  &.is-open
+    .select-drop
+      display: block
+  .select-value
+    display: inline-block
+    width: 119px
+    padding: 14px 10px
+    border: 1px solid #cbcbcb
+    border-radius: 4px
+    background-color: #fff
+    font-size: 13px
+    position: relative
+    cursor: pointer
+    &:before
+      content: ""
+      position: absolute
+      top: 2px
+      bottom: 2px
+      right: 38px
+      width: 1px
+      background: #cbcbcb
+    &:after
+      content: ""
+      +arrow(8,5,#cbcbcb, b)
+      position: absolute
+      top: 50%
+      margin-left: -4px
+      right: 15px
+    em
+      font-style: normal 
+    // i
+  input
+  .select-drop
+    display: none
+    width: 140px
+    position: absolute
+    top: -25px
+    left: 0
+    border: 1px solid #dfdfdf
+    border-radius: 7px
+    background-color: #fff
+    box-shadow: 0 5px 24px rgba(10,40,71,.48)
+    ul
+      padding: 10px 0 
+    li
+      padding: 5px 0 5px 25px
+      font-size: 13px
+      cursor: pointer
+      position: relative
+      &:hover
+        background: #FCFAE7
+        color: #ec4300
+        text-decoration: underline
+      &.is-selected
+        &:before
+          content: ""
+          position: absolute
+          top: 9px
+          left: 9px
+          +s($s-checked)
+          +retina
+            +s($s-checked-x2)
+
+
+
+
+
+
+
+ 
+  
+
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>index page title </title>
+    <meta charset="utf-8">
+    <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <link href="css/common.css" rel="stylesheet">
+  </head>
+  <body class="is-popup">
+    <div class="out">
+      <div class="overlay"></div>
+      <div class="popup animation-target">
+        <div class="popup-close js-popup-close"></div>
+        <div style="display: none;" class="popup-succes js-popup-succes">
+          <div class="popup-succes-in"><i class="popup-succes-ico"></i>
+            <div class="popup-succes-state">Ваш счет успешно пополнен</div>
+            <div class="popup-succes-note">Объявление теперь горячее</div>
+          </div>
+        </div>
+        <div class="popup-in js-popup-in">
+          <h3 class="popup-title">Пополнение счета</h3>
+          <div class="popup-payment">
+            <div class="popup-note">Выберите тип платежа</div>
+            <ul class="popup-payment-type js-payment-type">
+              <li class="popup-payment-item is-active"><i class="ico-privat"></i></li>
+              <li class="popup-payment-item"><i class="ico-visa"></i></li>
+              <li class="popup-payment-item"><i class="ico-yandex"></i></li>
+              <li class="popup-payment-item js-payment-sms"><i class="ico-sms"></i></li>
+            </ul>
+            <div class="popup-note">Сумма платежа</div>
+            <div class="popup-summ">
+              <div class="popup-label">
+                <input class="input">
+              </div>
+              <div class="popup-label">
+                <div class="popup-summ-note">грн.</div>
+              </div>
+            </div>
+            <div class="popup-sms-sum">
+              <div class="select js-select"><span class="select-value"><em class="js-select-text">10 гривен</em><i></i></span>
+                <input type="hidden" val="" value="10 гривен" class="js-select-input">
+                <div class="select-drop js-select-drop">
+                  <ul>
+                    <li data-id="1">5 гривен</li>
+                    <li data-id="2" class="is-selected">10 гривен</li>
+                    <li data-id="3">22.50 гривен</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="popup-commission js-popup-commission-pay">С карты спишется также комиссия 0,5%</div>
+            <div class="popup-commission js-popup-commission-sms">Со счета спишется также комиссия оператора  в размере 6 грн.</div>
+          </div>
+          <div class="popup-pay"><a href="#" class="popup-pay-btn js-pay">Оплатить</a>
+            <div class="popup-pay-descr">После нажатия кнопки «Оплатить» вы будете перенаправлены на сайт money.ua</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script data-headjs-load="js/init.js" src="js/lib/head.js"> </script>
+  </body>
+</html>

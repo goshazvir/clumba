@@ -1,0 +1,53 @@
+﻿- var titleMod = { title: 'index page title' }; 
+- var session = { locale: '' }
+
+doctype html
+
+html
+  include includes/head.jade 
+  body.is-popup
+    .out
+      .overlay
+      .popup.animation-target
+        .popup-close.js-popup-close
+        .popup-succes.js-popup-succes(style="display: none;")
+          .popup-succes-in
+            i.popup-succes-ico
+            .popup-succes-state Ваш счет успешно пополнен
+            .popup-succes-note Объявление теперь горячее
+        .popup-in.js-popup-in
+          h3.popup-title Пополнение счета
+          .popup-payment
+            .popup-note Выберите тип платежа
+            ul.popup-payment-type.js-payment-type
+              li.popup-payment-item.is-active
+                i.ico-privat
+              li.popup-payment-item
+                i.ico-visa
+              li.popup-payment-item
+                i.ico-yandex
+              li.popup-payment-item.js-payment-sms
+                i.ico-sms
+            .popup-note Сумма платежа
+            .popup-summ
+              .popup-label
+                input.input
+              .popup-label
+                .popup-summ-note грн.
+            .popup-sms-sum
+              .select.js-select
+                span.select-value
+                  em.js-select-text 10 гривен
+                  i
+                input.js-select-input(type='hidden', val='', value='10 гривен')
+                .select-drop.js-select-drop
+                  ul
+                    li(data-id='1') 5 гривен
+                    li.is-selected(data-id='2') 10 гривен
+                    li(data-id='3') 22.50 гривен
+            .popup-commission.js-popup-commission-pay С карты спишется также комиссия 0,5%
+            .popup-commission.js-popup-commission-sms Со счета спишется также комиссия оператора  в размере 6 грн.
+          .popup-pay
+            a.popup-pay-btn.js-pay(href="#") Оплатить
+            .popup-pay-descr После нажатия кнопки «Оплатить» вы будете перенаправлены на сайт money.ua
+    script(data-headjs-load='js/init.js', src='js/lib/head.js') 

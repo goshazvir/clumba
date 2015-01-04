@@ -612,6 +612,15 @@ body.is-popup {
   margin: 0 auto 20px;
 }
 
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  .popup .popup-succes .popup-succes-ico {
+    background-image: url("../img/sprite.png");
+    background-position: 0px 0px;
+    width: 190px;
+    height: 190px;
+  }
+}
+
 .popup .popup-succes .popup-succes-state {
   margin-bottom: 15px;
   font-size: 16px;
